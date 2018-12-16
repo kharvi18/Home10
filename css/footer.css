@@ -1,0 +1,20 @@
+.copyright {
+  font-family: "Open Sans", sans-serif;
+}
+.copyright span {
+  color: #df001f;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-family: "Great Vibes", cursive;
+}
+.footer-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  margin: 8px;
+  color: #000;
+  transition: color .5s ease-out;
+}
+.footer-link:hover {
+  color: #df001f;
+  transition: color .3s ease-in;
+}

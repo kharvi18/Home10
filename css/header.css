@@ -1,0 +1,45 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+nav {
+  background-color: #df001f !important;
+}
+img[src="img/logo.png"],
+img[src="../img/logo.png"] {
+  width: 60%;
+  vertical-align: middle;
+}
+.nav-link, .social-media, .side-link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+}
+.nav-link:hover {
+  background-color: transparent;
+  text-decoration: line-through;
+}
+.social-media i {
+  font-size: 16px;
+}
+.social-media:hover {
+  background-color: transparent;
+}
+.purchase {
+  font-size: 8px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  color: #df001f;
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
+  margin-right: 20px;
+}
+.side-purchase {
+  background-color: #df001f;
+  color: #fff;
+}
+.sidenav li > a {
+  color: #df001f;
+}

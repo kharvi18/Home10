@@ -1,0 +1,24 @@
+.swiper-container-horizontal>.swiper-pagination-progressbar {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #df001f;
+}
+.swiper-button-prev {
+  right: 50px;
+  top: 100px;
+  left: inherit;
+  background-image: url("../img/prev.png");
+  background-repeat: no-repeat;
+  background-size: 100%
+}
+.swiper-button-next {
+  top: 100px;
+  right: 12px;
+  background-image: url("../img/next.png");
+  background-repeat: no-repeat;
+  background-size: 100%
+}
