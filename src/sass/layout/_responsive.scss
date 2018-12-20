@@ -1,0 +1,300 @@
+$break-small: 320px;
+$break-medium: 600px;
+$break-large: 992px;
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media == medium-screens {
+    @media only screen and (max-width: $break-medium) {
+      @content;
+    }
+  } @else if $media == wide-screens {
+    @media only screen and (min-width: $break-medium) and (max-width: $break-large + 1) {
+      @content;
+    }
+  }
+}
+
+.sidenav-overlay {
+  @include respond-to(medium-screen) {
+    background-color: transparent;
+  }
+  @include respond-to(wide-screen) {
+    background-color: transparent;
+  }
+}
+
+.swiper-container {
+  height: 80% !important;
+}
+
+.title {
+  position: absolute;
+  z-index: 10;
+  left: 37%;
+  top: 26%;
+  display: flex;
+  flex-direction: column;
+  @include respond-to(medium-screen) {
+    left: 50%;
+  }
+  @include respond-to(wide-screen) {
+    left: 40%;
+  }
+}
+
+.sub-title {
+  margin-left: 12px;
+  h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 24px;
+    text-transform: uppercase;
+    @include respond-to(medium-screen) {
+      margin: 20px 0;
+    }
+  }
+  span {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #df001f;
+  }
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 26px;
+  white-space: pre-line;
+  color: #fff;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 1;
+  @include respond-to(medium-screen) {
+    font-size: 18px;
+    white-space: normal;
+    text-align: center;
+  }
+  @include respond-to(wide-screen) {
+    font-size: 18px;
+    text-align: center;
+  }
+  span {
+    color: #fff;
+    font-size: 38px;
+    @include respond-to(medium-screen) {
+      font-size: 30px;
+    }
+    @include respond-to(wide-screen) {
+      font-size: 40px;
+    }
+  }
+}
+
+.discover {
+  @include respond-to(medium-screen) {
+    padding: 7px;
+    font-size: 10px;
+    letter-spacing: 0;
+    margin-top: 20px;
+  }
+}
+
+.container-wrap {
+  margin-left: inherit;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  @include respond-to(medium-screen) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}
+
+.swiper-container-2 {
+  @include respond-to(medium-screen) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  @include respond-to(medium-screen) {
+    top: 45px;
+  }
+}
+
+.wrap-container {
+  @include respond-to(medium-screen) {
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+}
+
+.texts {
+  margin-left: 7%;
+  @include respond-to(medium-screen) {
+    font-size: 18px;
+    margin-left: 0;
+  }
+  @include respond-to(wide-screen) {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+
+h6 {
+  margin-top: 0;
+  @include respond-to(medium-screen) {
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}
+
+.swiper-container-3 {
+  width: 70% !important;
+  margin: 0;
+  @include respond-to(medium-screen) {
+    margin: 0 auto !important;
+  }
+}
+
+.swiper-container-4 {
+  width: 30% !important;
+  margin: 0;
+  @include respond-to(medium-screen) {
+    width: 100% !important;
+  }
+}
+
+.swiper-container-3 {
+  justify-content: flex-start !important;
+  @include respond-to(medium-screen) {
+    width: 100% !important;
+  }
+}
+
+img[src="img/concert.png"] {
+  @include respond-to(medium-screen) {
+    width: 60%;
+    object-fit: contain;
+  }
+}
+
+.container {
+  width: 80%;
+  margin-top: 30px;
+  @include respond-to(medium-screen) {
+    width: 100%;
+  }
+  @include respond-to(wide-screen) {
+    width: 100%;
+  }
+}
+
+.california {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  white-space: pre-line;
+  @include respond-to(medium-screen) {
+    white-space: normal;
+  }
+  span {
+    font-family: "Great Vibes", cursive;
+    font-size: 22px;
+    text-transform: capitalize;
+    @include respond-to(medium-screen) {
+      color: #df001f;
+    }
+  }
+}
+
+.founder {
+  width: 100%;
+  height: 370px;
+  padding-left: 100px !important;
+  background-image: url("../img/founder.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  @include respond-to(medium-screen) {
+    text-align: center;
+    padding-left: 0 !important;
+  }
+}
+
+.footer-link, .copyright {
+  @include respond-to(medium-screen) {
+    font-size: 10px;
+  }
+}
+
+.salaud {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include respond-to(medium-screen) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.title-2 {
+  @include respond-to(medium-screen) {
+    left: 0;
+  }
+  @include respond-to(wide-screen) {
+    left: 40%;
+  }
+}
+
+.swiper-slide-4 {
+  @include respond-to(wide-screen) {
+    margin-right: 0 !important;
+  }
+}
+
+.song {
+  width: 60%;
+  @include respond-to(medium-screen) {
+    width: 100%;
+  }
+  @include respond-to(wide-screen) {
+    width: 100%;
+  }
+}
+
+.instagram {
+  width: 35%;
+  @include respond-to(medium-screen) {
+    width: 100%;
+  }
+  @include respond-to(wide-screen) {
+    width: 100%;
+  }
+}
+
+.inst {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include respond-to(medium-screen) {
+    justify-content: space-around;
+  }
+  @include respond-to(wide-screen) {
+    justify-content: space-around;
+  }
+  img {
+    margin-bottom: 15px;
+  }
+}
